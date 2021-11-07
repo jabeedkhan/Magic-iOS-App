@@ -1,0 +1,5 @@
+export const SET_LOGGED_IN_USER = 'SET_LOGGED_IN_USER';
+export const SET_PROFILE_DETAILS = 'SET_PROFILE_DETAILS';
+export const SET_CITIES = 'SET_CITIES';
+export const SET_STATES = 'SET_STATES';
+export const SET_BOOKING = 'SET_BOOKING';

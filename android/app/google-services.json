@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "466129715676",
+    "project_id": "magichandsapp",
+    "storage_bucket": "magichandsapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:466129715676:android:2867b0613cc6bde44f0f19",
+        "android_client_info": {
+          "package_name": "com.magichands"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "466129715676-a6ge8r1evmfntkr0vv0c1drm5qq6p2il.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.magichands",
+            "certificate_hash": "15b8c46dd125785a55d191105ff628940eb3bcf5"
+          }
+        },
+        {
+          "client_id": "466129715676-se6hsab2cpe2vqodud49agj9v0d5uo0h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPdJv8aKOkJGXMDv-xbF52AP-R5LEStic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "466129715676-se6hsab2cpe2vqodud49agj9v0d5uo0h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
