@@ -12,3 +12,5 @@ export const doSignup = body => {
 export const doChangePassword = body => {
   return fetchRequest(`api/change_password`, method.POST, body);
 };
+
+

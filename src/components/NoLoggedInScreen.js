@@ -14,6 +14,7 @@ import {Store} from '../store/store';
 import {useContext} from 'react';
 import {width} from '../Common/style';
 import {getProfileDetails} from '../actions/common';
+import BookTest from '../Containers/Booking/BookAdd';
 const getUserData = (state, key) => {
   // alert(JSON.stringify(state));
   return state?.common?.profile?.user[key];
@@ -23,24 +24,27 @@ const NoLoggedInScreen = ({children}) => {
   const route = useRoute();
   const {state, dispatch} = useContext(Store);
   useEffect(() => {}, [state?.data?.user?.token, route.key]);
-  if (!state?.common?.profile?.user) {
-    return (
-      <View style={styles.loginCtaContainer}>
-        <View style={styles.logo_section}>
-          <Image source={logo} alt="Magic Hands" style={styles.logo} />
-        </View>
-        <TouchableOpacity
-          style={styles.loginContainer}
-          onPress={() => navigation.navigate('Login')}>
-          <Text style={styles.loginCta}>Please Login to Proceed</Text>
-        </TouchableOpacity>
-      </View>
-    );
-  }
+  const user = state?.common?.profile?.user ? state?.common?.profile?.user : null;
+  // if (!state?.common?.profile?.user) {
+  //   return (
+  //     <View style={styles.loginCtaContainer}>
+  //       <View style={styles.logo_section}>
+  //         <Image source={logo} alt="Magic Hands" style={styles.logo} />
+  //       </View>
+  //       <TouchableOpacity
+  //         style={styles.loginContainer}
+  //         onPress={() => navigation.navigate('Login')}>
+  //         <Text style={styles.loginCta}>Please Login to Proceed</Text>
+  //       </TouchableOpacity>
+  //     </View>
+  //   );
+  // }
+      // <BookTest user/>
   return children;
 };
 
 export default NoLoggedInScreen;
+
 const styles = StyleSheet.create({
   container: {
     // height: '100%',

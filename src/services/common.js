@@ -30,6 +30,7 @@ export const fetchRequest = (uri, method, body, token, header = {}) => {
       uri,
       body: reqBody,
     };
+    debugger;
     // alert(JSON.stringify(config));
     const ax =
       method.toUpperCase() === 'GET'

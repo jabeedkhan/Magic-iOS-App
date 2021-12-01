@@ -42,6 +42,8 @@ export const setStates = (payload, dispatch) => {
 export const getLoggedInUser = dispatch => {
   try {
     AsyncStorage.getItem(constants.token).then(val => {
+      console.log('value ', val);
+      debugger;
       setLoggedInUser(JSON.parse(val), dispatch);
       getProfileDetails(JSON.parse(val)?.token, dispatch);
     });

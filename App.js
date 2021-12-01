@@ -1,6 +1,6 @@
 import React, {useContext, useEffect} from 'react';
 import Providers from './src/navigation';
-import PushNotification from 'react-native-push-notification';
+// import PushNotification from 'react-native-push-notification';
 import {Store, StoreProvider} from './src/store/store';
 import {getLoggedInUser, getMetaData} from './src/actions/common';
 

@@ -8,6 +8,7 @@ import BookingTab from './BookingTab';
 
 const Booking = () => {
   const route = useRoute();
+  console.log('route.params ', route);
   return (
     <NoLoggedInScreen>
       <ScrollView>

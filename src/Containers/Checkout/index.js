@@ -40,6 +40,7 @@ const Checkout = () => {
         time: new Date().getTime(),
       };
       const res = await submitBooking(req);
+      console.log(res);
       if (res?.status) {
         navigation.navigate('OrderDetails', {
           service,
