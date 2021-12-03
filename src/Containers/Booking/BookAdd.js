@@ -118,7 +118,7 @@ const BookTest = ({service}) => {
   };
   return (
     <SafeAreaView >
-      <ScrollView style={{flex: 1, padding: 10}}>
+      <ScrollView style={{flex: 1}}>
         <View style={styles.pickerContainer}>
           <Text style={styles.text}>First Name</Text>
           <View style={styles.picker}>
@@ -274,7 +274,6 @@ export default BookTest;
 
 const styles = StyleSheet.create({
   pickerContainer: {
-   
     backgroundColor: colors.primaryBlack,
     margin: 10,
     borderRadius: 20,
@@ -293,6 +292,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     paddingLeft: 20,
     color: colors.black,
+
   },
   input: {
     borderWidth: 1,
@@ -318,6 +318,8 @@ const styles = StyleSheet.create({
     borderColor: colors.black,
     borderRadius: 8,
     marginTop: 5,
+    padding:10,
+    
   },
   proceed: {
     backgroundColor: colors.submit,
@@ -334,9 +336,12 @@ const styles = StyleSheet.create({
     color: colors.black,
     fontSize: 15,
     opacity: 1.0,
+    height:30
   },
   disabledBackgroundColor: {
     backgroundColor: colors.gray,
-    opacity: 0.8,
+    opacity: 0.9,
+    flex:1
+    
   },
 });

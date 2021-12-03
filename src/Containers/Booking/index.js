@@ -1,5 +1,5 @@
 import React from 'react';
-import {ScrollView, StyleSheet, View, Text} from 'react-native';
+import {ScrollView, StyleSheet, View, Text, SafeAreaView} from 'react-native';
 import colors from '../../Common/colors';
 import NoLoggedInScreen from '../../components/NoLoggedInScreen';
 import CommonHeader from '../../components/CommonHeader';
@@ -10,14 +10,16 @@ const Booking = () => {
   const route = useRoute();
   console.log('route.params ', route);
   return (
-    <NoLoggedInScreen>
-      <ScrollView>
-        <View style={styles.BookingContainer}>
-          <CommonHeader headText={'Booking'} backPage="Home" />
-          <BookingTab service={route.params.service} />
-        </View>
-      </ScrollView>
-    </NoLoggedInScreen>
+    <SafeAreaView>
+      <NoLoggedInScreen>
+        <ScrollView>
+          <View style={styles.BookingContainer}>
+            <CommonHeader headText={'Booking'} backPage="Home" />
+            <BookingTab service={route.params.service} />
+          </View>
+        </ScrollView>
+      </NoLoggedInScreen>
+    </SafeAreaView>
   );
 };
 

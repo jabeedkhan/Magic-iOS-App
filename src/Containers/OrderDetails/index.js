@@ -5,6 +5,7 @@ import {
   View,
   TouchableOpacity,
   Text,
+  SafeAreaView,
 } from 'react-native';
 import OrderHead from './OrderHead';
 import colors from '../../Common/colors';
@@ -21,25 +22,27 @@ const OrderDetails = () => {
 
   return (
     <>
-      <CommonHeader headText={`Order # - ${order?.id}`} />
-      <ScrollView>
-        <View style={styles.BookingContainer}>
-          <OrderHead order={order} />
-        </View>
-        <View style={styles.BookingContainer}>
-          <OrderServices order={order} />
-        </View>
-        <View style={styles.BookingContainer}>
-          <OrderAddress order={order} />
-        </View>
-        <View style={styles.pickerContainer}>
-          <TouchableOpacity
-            style={styles.proceed}
-            onPress={() => navigation.push('Home')}>
-            <Text style={styles.proceedText}>Proceed to Home</Text>
-          </TouchableOpacity>
-        </View>
-      </ScrollView>
+      <SafeAreaView>
+        <CommonHeader headText={`Order # - ${order?.id}`} />
+        <ScrollView>
+          <View style={styles.BookingContainer}>
+            <OrderHead order={order} />
+          </View>
+          <View style={styles.BookingContainer}>
+            <OrderServices order={order} />
+          </View>
+          <View style={styles.BookingContainer}>
+            <OrderAddress order={order} />
+          </View>
+          <View style={styles.pickerContainer}>
+            <TouchableOpacity
+              style={styles.proceed}
+              onPress={() => navigation.push('Home')}>
+              <Text style={styles.proceedText}>Proceed to Home</Text>
+            </TouchableOpacity>
+          </View>
+        </ScrollView>
+      </SafeAreaView>
     </>
   );
 };

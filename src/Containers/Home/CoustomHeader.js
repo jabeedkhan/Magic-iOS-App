@@ -6,6 +6,7 @@ import {
   Text,
   TextInput,
   View,
+  SafeAreaView,
 } from 'react-native';
 import colors from '../../Common/colors';
 import logo from '../../assets/images/logo.png';
@@ -14,11 +15,13 @@ import {width} from '../../Common/style';
 const CustomHeader = () => {
   return (
     <>
-      <View style={styles.HomeContainer}>
-        <View style={styles.logo_section}>
-          <Image source={logo} alt="Magic Hands" style={styles.logo} />
+      <SafeAreaView>
+        <View style={styles.HomeContainer}>
+          <View style={styles.logo_section}>
+            <Image source={logo} alt="Magic Hands" style={styles.logo} />
+          </View>
         </View>
-      </View>
+      </SafeAreaView>
     </>
   );
 };

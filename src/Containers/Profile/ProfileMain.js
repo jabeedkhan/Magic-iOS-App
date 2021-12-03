@@ -6,6 +6,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   ScrollView,
+  SafeAreaView,
 } from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import logo from '../../assets/images/logo.png';
@@ -62,6 +63,7 @@ const ProfileMain = () => {
 
   return (
     <ScrollView style={styles.container} contentContainerStyle={{flexGrow: 1}}>
+      <SafeAreaView>
       <View style={styles.profileMain}>
         <View style={styles.profilenameBox}>
           {/* <Image
@@ -183,6 +185,7 @@ const ProfileMain = () => {
           </View>
         </TouchableOpacity>
       </View>
+      </SafeAreaView>
     </ScrollView>
   );
 };

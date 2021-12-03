@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   Text,
   ActivityIndicator,
+  SafeAreaView,
 } from 'react-native';
 import colors from '../../Common/colors';
 import ServiceDetail from './ServiceDetails';
@@ -56,27 +57,29 @@ const Checkout = () => {
   };
   return (
     <>
-      <CommonHeader headText="Checkout" />
-      <ScrollView>
-        <View style={styles.BookingContainer}>
-          {/* <Text>{type}</Text> */}
-          {service && <ServiceDetail service={service} />}
-          <AddressDetails address={address} type={type} />
-          <PaymentMethod />
-          <View style={styles.submitContainer}>
-            <TouchableOpacity
-              style={styles.orderBtn}
-              onPress={submit}
-              activeOpacity={loader ? 1 : 0.7}>
-              {loader ? (
-                <ActivityIndicator size="small" color={colors.white} />
-              ) : (
-                <Text style={styles.proceedBtn}>Proceed to Order</Text>
-              )}
-            </TouchableOpacity>
+      <SafeAreaView>
+        <CommonHeader headText="Checkout" />
+        <ScrollView>
+          <View style={styles.BookingContainer}>
+            {/* <Text>{type}</Text> */}
+            {service && <ServiceDetail service={service} />}
+            <AddressDetails address={address} type={type} />
+            <PaymentMethod />
+            <View style={styles.submitContainer}>
+              <TouchableOpacity
+                style={styles.orderBtn}
+                onPress={submit}
+                activeOpacity={loader ? 1 : 0.7}>
+                {loader ? (
+                  <ActivityIndicator size="small" color={colors.white} />
+                ) : (
+                  <Text style={styles.proceedBtn}>Proceed to Order</Text>
+                )}
+              </TouchableOpacity>
+            </View>
           </View>
-        </View>
-      </ScrollView>
+        </ScrollView>
+      </SafeAreaView>
     </>
   );
 };
